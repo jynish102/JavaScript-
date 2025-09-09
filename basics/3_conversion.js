@@ -50,4 +50,5 @@ let number1 = "2356";
 // console.log(10 + 12 + "10");
 // console.log(false);
 // console.log(+false);
+
 // console.log(+"");
