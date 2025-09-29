@@ -1,0 +1,69 @@
+<html>
+    <head>
+        
+        <title>DOM Learning</title>
+        
+    </head>
+    <body style ="background-color:green;color:white">
+        <div class="bg-black">
+            <h1 id="title" class="heading">Thanos From Marvel
+                <span style= "display : none;">Dr.strange form Span</span>
+            </h1>
+            <p>Thanos is grate villon from marvel<p>
+                <h1>Loki from h2</h1>
+                <h1>loki from h3</h1>
+                <!------------------------------------------------------------------------->
+                <ul>
+                    <li class = "list-item">one</li>
+                    <li class = "list-item">rwo</li>
+                    <li class = "list-item">three</li>
+                </ul>
+                
+        </div>
+       <!--
+        <div class="parent">
+            <div class="day">Monday</div>
+            <div class="day">Thursday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Tuesday</div>
+        </div> -->
+<script src="" async defer></script>
+    </body>
+    <script>
+        let parent = document.querySelector('.parent');/*select element by 
+        class for select specific class use . and then class name, # for id*/
+        console.log(parent);
+        console.log(parent.children);
+        console.log(parent.children[0].innerHTML);
+        /*because it is array so i use array property .innerHTML , .innerText*/
+
+        //for(let i = 0; i<parent.children.length; i++){
+          //  console.log(parent.children[i].innerHTML)
+        //}
+
+        //parent.children[3].style.color = "orange"
+        console.log(parent.firstElementChild);
+
+        let dayOne = document.querySelector('.day')
+        console.log(dayOne);
+        console.log(dayOne.parentElement);
+        console.log(dayOne.nextElementSibling);
+
+        console.log("NODES:",parent.childNodes)/*video 33 at 15:00*/
+
+//----------------------------------------------------------------------------------------------------
+        let div = document.createElement('div')
+        console.log(div);
+        /*with out write code in html body create by js*/
+        div.className = "main"
+        div.id = Math.round(Math.random() * 10+1)  
+        div.setAttribute("title","generate title") 
+        div.style.backgroundColor = "pink"    
+        div.style.padding = "12px"
+        //1div.innerText = "Marvel"
+       let addText =  document.createTextNode("Marvel")
+       div.appendChild(addText)/*1 and this both are same*/
+
+       document.body.appendChild(div)
+</script>
+</html>
